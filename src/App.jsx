@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 import Board from './components/Board';
-import { Iconoir } from 'iconoir-react';
 import { useEffect } from 'react';
 
 export default function Game(){
@@ -86,18 +85,18 @@ function Navbar() {
               <div className="logo-name">Dzakwan Irfan Ramdhani</div>
           </div>
           <nav>
-              <a href="#home">HOME</a>
-              <a href="#contact">CONTACT</a>
-              <a href="#project">PROJECTS</a>
-              <a href="#extras">EXTRAS</a>
-              <a href="#articles">ARTICLES</a>
+              <a href="../../index.html">HOME</a>
+              <a href="../../index.html#contact">CONTACT</a>
+              <a href="../../index.html#project">PROJECTS</a>
+              <a href="#">EXTRAS</a>
+              <a href="#">ARTICLES</a>
           </nav>
           <div id="myLinks" className={menuActive ? 'active' : ''}>
-              <a href="#home">HOME</a>
-              <a href="#contact">CONTACT</a>
-              <a href="#project">PROJECTS</a>
-              <a href="#extras">EXTRAS</a>
-              <a href="#articles">ARTICLES</a>
+              <a href="../../index.html">HOME</a>
+              <a href="../../index.html#contact">CONTACT</a>
+              <a href="../../index.html#project">PROJECTS</a>
+              <a href="#">EXTRAS</a>
+              <a href="#">ARTICLES</a>
             </div>
           <div className="hamburger" onClick={toggleMenu}>
           <i className="iconoir-menu">=</i>

@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  iconoir-react:
+    specifier: ^7.3.0
+    version: 7.3.0(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1490,6 +1493,14 @@ packages:
     dependencies:
       function-bind: 1.1.2
     dev: true
+
+  /iconoir-react@7.3.0(react@18.2.0):
+    resolution: {integrity: sha512-vdljknLaUT3aGbRbsWkGfqqyJ8roPcXqayJmUjHnJgeolmupVWVo/EVA3OtmjlKvvZmQRu9radmMYS0NmfUAsw==}
+    peerDependencies:
+      react: ^16.8.6 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /ignore@5.3.0:
     resolution: {integrity: sha512-g7dmpshy+gD7mh88OC9NwSGTKoc3kyLAZQRU1mt53Aw/vnvfXnbC+F/7F7QoYVKbV+KNvJx8wArewKy1vXMtlg==}

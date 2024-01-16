@@ -156,7 +156,7 @@ width: 100%; /* Mengatur lebar garis bawah menjadi 100% saat dihover */
 
 .title{
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 .title .sub-title{
@@ -182,6 +182,7 @@ width: 100%; /* Mengatur lebar garis bawah menjadi 100% saat dihover */
 }
 
 .game-info{
+  color: var(--putih);
   position: absolute;
   right: 10%;
   top: 0;

@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 import Board from './components/Board';
+import { Iconoir } from 'iconoir-react';
+import { useEffect } from 'react';
 
 export default function Game(){
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -28,7 +30,7 @@ export default function Game(){
 
     return(
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button style={{ padding: '4px 8px', cursor: 'pointer' }} onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
@@ -59,32 +61,51 @@ function Header(){
   );
 }
 
-function Navbar(){
-  return(
-    <header>
-        <div className="logo">
-            <img src="img/logo.png" alt="logo"></img>
-            <div className="logo-name">Dzakwan Irfan Ramdhani</div>
+function Navbar() {
+  const [menuActive, setMenuActive] = useState(false);
+
+  useEffect(() => {
+      const handleOutsideClick = (event) => {
+          if (menuActive && !event.target.closest('#myLinks') && !event.target.closest('.hamburger')) {
+              setMenuActive(false);
+          }
+      };
+
+      document.addEventListener('click', handleOutsideClick);
+      return () => document.removeEventListener('click', handleOutsideClick);
+  }, [menuActive]);
+
+  const toggleMenu = () => {
+      setMenuActive(!menuActive);
+  };
+
+  return (
+      <header>
+          <div className="logo">
+              <img src="img/logo.png" alt="logo"></img>
+              <div className="logo-name">Dzakwan Irfan Ramdhani</div>
+          </div>
+          <nav>
+              <a href="#home">HOME</a>
+              <a href="#contact">CONTACT</a>
+              <a href="#project">PROJECTS</a>
+              <a href="#extras">EXTRAS</a>
+              <a href="#articles">ARTICLES</a>
+          </nav>
+          <div id="myLinks" className={menuActive ? 'active' : ''}>
+              <a href="#home">HOME</a>
+              <a href="#contact">CONTACT</a>
+              <a href="#project">PROJECTS</a>
+              <a href="#extras">EXTRAS</a>
+              <a href="#articles">ARTICLES</a>
+            </div>
+          <div className="hamburger" onClick={toggleMenu}>
+          <i className="iconoir-menu">=</i>
         </div>
-        <nav>
-            <a href="#home">HOME</a>
-            <a href="#contact">CONTACT</a>
-            <a href="#project">PROJECTS</a>
-            <a href="">EXTRAS</a>
-            <a href="">ARTICLES</a>
-        </nav>
-        <div id="myLinks">
-            <a href="#home">HOME</a>
-            <a href="#contact">CONTACT</a>
-            <a href="#project">PROJECTS</a>
-            <a href="">EXTRAS</a>
-            <a href="">ARTICLES</a>
-        </div>
-        <div className="hamburger">
-            <i className="iconoir-menu"></i>
-        </div>
-    </header>
+      </header>
   );
 }
+
+
 
 

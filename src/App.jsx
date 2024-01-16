@@ -85,16 +85,16 @@ function Navbar() {
               <div className="logo-name">Dzakwan Irfan Ramdhani</div>
           </div>
           <nav>
-              <a href="../../index.html">HOME</a>
-              <a href="../../index.html#contact">CONTACT</a>
-              <a href="../../index.html#project">PROJECTS</a>
+              <a href="https://dzakwan-irfan.site">HOME</a>
+              <a href="https://dzakwan-irfan.site/#contact">CONTACT</a>
+              <a href="https://dzakwan-irfan.site/#project">PROJECTS</a>
               <a href="#">EXTRAS</a>
               <a href="#">ARTICLES</a>
           </nav>
           <div id="myLinks" className={menuActive ? 'active' : ''}>
-              <a href="../../index.html">HOME</a>
-              <a href="../../index.html#contact">CONTACT</a>
-              <a href="../../index.html#project">PROJECTS</a>
+              <a href="https://dzakwan-irfan.site">HOME</a>
+              <a href="https://dzakwan-irfan.site/#contact">CONTACT</a>
+              <a href="https://dzakwan-irfan.site/#project">PROJECTS</a>
               <a href="#">EXTRAS</a>
               <a href="#">ARTICLES</a>
             </div>
